@@ -1,0 +1,1 @@
+Before opening the webpage, make sure you connect to the Internet. Because for the arrow icon, I used Font Awesome. The CDN was imported at the top of the HTML file.

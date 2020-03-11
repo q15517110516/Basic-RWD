@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Import Font Awesome for icons -->
+    <script src="https://kit.fontawesome.com/8b3ce77e4d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="PC.css">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs
+/jquery/1.4.0/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <!-- Using FlexBox to design flexible reponsive layout structure -->
+
+    <!-- 'container1' is the outer flexbox container -->
+    <div class="container1">
+
+        <!-- Inside the outer container, define two containers 'container2-1' & 'container2-2' represent each column -->
+        <div class="container2-1">
+
+            <!-- Define 3 containers: 'container3-1', 'container3-2' & 'btn1' for flexbox -->
+            <!-- 'container3-1' is the flexbox for the header-->
+            <div class="container3-1">
+
+                <!-- Define two flexboxes for text and button -->
+                <div class="firstheader">
+                    <h1>Header Text</h1>
+                </div>
+                <div class="btnup">
+                    <button id="btn-up" class="arrow-up" onclick="handleClick1()"><i class="fas fa-chevron-up"></i></button>
+                </div>
+                <hr>
+            </div>
+
+            <!-- 'container3-2' is the flexbox for the list -->
+            <div id="list1" class="container3-2">
+                <h2>Package Includes:</h2>
+                <li>Item Name</li>
+                <li>Item Name</li>
+                <li>Item Name</li>
+                <li>Item Name</li>
+                <li>Item Name</li>
+                <li>Item Name</li>
+                <li>Item Name</li>
+                <li>Item Name</li>
+                <li>Item Name</li>
+                <li>Item Name</li>
+                <li>Item Name</li>
+            </div>
+
+            <!-- 'btn1' is the thrid flexbox for the button -->
+            <div id="btn1" class="btn">
+                <button>Button</button>
+            </div>
+        </div>
+
+        <!-- 'container2-2' is the flexbox for the second column -->
+        <div class="container2-2">
+
+            <!-- Define 3 containers: 'container3-3', 'container3-4' & 'btn2' for flexbox -->
+            <div class="container3-3">
+
+                <!-- Define two flexboxes for text and button -->
+                <div class="secondheader">
+                    <h1>This is Long Header Text</h1>
+                </div>
+                <div class="btndown">
+                    <button id="btn-down" class="arrow-down" onclick="handleClick2()"><i class="fas fa-chevron-down"></i></button>
+                </div>
+                <hr>
+            </div>
+
+            <!-- 'container3-4' is the flexbox for the list -->
+            <div id="list2" class="container3-4">
+                <h2>Package Includes:</h2>
+                <li>Item Name</li>
+                <li>Item Name</li>
+                <li>Item Name</li>
+                <li>Item Name</li>
+            </div>
+
+            <!-- 'btn2' is the flexbox for the button -->
+            <div id="btn2" class="btn">
+                <button>Button</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+<script>
+    // Using JS to achieve the expand
+    // In mobile, if the arrow-up button is clicked, expand the list & the button from the second column
+    var handleClick1 = function() {
+        document.getElementById("list2").style.display = "none";
+        document.getElementById("btn2").style.display = "none";
+        document.getElementById("list1").style.display = "block";
+        document.getElementById("btn1").style.display = "block";
+    }
+
+    // if the arrow-down button is clicked, expand the list & the button from the first column
+    var handleClick2 = function() {
+        document.getElementById("list1").style.display = "none";
+        document.getElementById("btn1").style.display = "none";
+        document.getElementById("list2").style.display = "block";
+        document.getElementById("btn2").style.display = "block";
+    }
+
+
+    // Using Jquery to achieve the expand
+    // $(document).ready(function() {
+    //     $("#btn-up").click(function() {
+    //         $("#btn2").hide();
+    //         $("#list2").hide();
+    //         $("#btn1").show();
+    //         $("#list1").show();
+    //     });
+    // });
+
+    // $(document).ready(function() {
+    //     $("#btn-down").click(function() {
+    //         $("#btn1").hide();
+    //         $("#list1").hide();
+    //         $("#btn2").show();
+    //         $("#list2").show();
+    //     });
+    // });
+</script>
+
+</html>
